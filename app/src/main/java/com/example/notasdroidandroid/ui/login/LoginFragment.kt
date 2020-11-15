@@ -40,6 +40,8 @@ class LoginFragment : Fragment() {
         val loginButton = view.findViewById<Button>(R.id.login)
         val loadingProgressBar = view.findViewById<ProgressBar>(R.id.loading)
 
+        loginButton.setOnClickListener {  }
+
         loginViewModel.loginFormState.observe(this,
             Observer { loginFormState ->
                 if (loginFormState == null) {

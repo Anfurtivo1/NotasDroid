@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notasdroidandroid.ui.login.LoginFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_first.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-
 
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
@@ -43,7 +43,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-
 
 }
