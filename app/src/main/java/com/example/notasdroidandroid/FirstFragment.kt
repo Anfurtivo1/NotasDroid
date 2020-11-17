@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import com.example.notasdroidandroid.ui.login.LoginFragment
+import com.example.notasdroidandroid.Login
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
@@ -36,7 +36,7 @@ class FirstFragment : Fragment() {
     }
 
     fun abrirLogin(){
-        val login = LoginFragment()
+        val login = Login()
         val transaction = fragmentManager!!.beginTransaction()
 
 //		//Llamamos al replace

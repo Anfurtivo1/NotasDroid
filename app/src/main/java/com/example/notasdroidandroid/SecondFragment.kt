@@ -30,8 +30,6 @@ class SecondFragment : Fragment() {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
 
-
-
         button.setOnClickListener { abrirMiMatricula() }
         button2.setOnClickListener { abrirMiExpendiente() }
 

@@ -1,8 +1,11 @@
 package com.example.notasdroidandroid
 
+import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+
 
 class BaseDatos(context: Context) : SQLiteOpenHelper(context, BDNOMBRE, null, BDVERSION) {
     companion object{
@@ -19,19 +22,26 @@ class BaseDatos(context: Context) : SQLiteOpenHelper(context, BDNOMBRE, null, BD
     }
 
 
+
+
     override fun onCreate(db: SQLiteDatabase?) {
         val CREATE_TABLE:String="Create table "+NOMBRETABLA+"(\n" +
-                COL_ID+ " integer primary key,\n" +
+                COL_ID+ " integer primary key autoincrement,\n" +
                 COL_NOMBRE+" text,\n" +
                 COL_CONTRASENA+" text,\n" +
                 COL_EMAIL +" text\n" +
                 ")"
         db!!.execSQL(CREATE_TABLE)
+        db.close()
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db!!.execSQL("DROP TABLE IF EXISTS "+ NOMBRETABLA)
         onCreate(db)
     }
+
+
+
+
 
 }
