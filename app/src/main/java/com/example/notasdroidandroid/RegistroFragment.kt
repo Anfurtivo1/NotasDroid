@@ -1,8 +1,13 @@
 package com.example.notasdroidandroid
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteOpenHelper
+import android.net.Uri
 import android.os.Bundle
+import android.os.StrictMode
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,13 +30,23 @@ class RegistroFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val GALERIA = 1
+    private val CAMARA = 2
+
+    // Si vamos a operar en modo público o privado (es decir si salvamos en nuestro directorio)
+    private var PUBLICO = false
+
+    private val IMAGEN_DIR = "/NotasDroid"
+    private lateinit var IMAGEN_URI: Uri
+    private lateinit var IMAGEN_MEDIA_URI: Uri
+    private var IMAGEN_NOMBRE = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        var UsuariosController = (RegistroFragment);
 
     }
 
@@ -53,6 +68,7 @@ class RegistroFragment : Fragment() {
         var usuarios=""
         btnMostrarRegistros.setOnClickListener { usuarios=SacarUsuarios() }
         var toast2:Toast = Toast.makeText(context,usuarios,Toast.LENGTH_SHORT)
+        btnHacerFoto.setOnClickListener { hacerFoto() }
 
     }
 
@@ -78,13 +94,63 @@ class RegistroFragment : Fragment() {
             }
     }
 
-    fun CrearUsuario(){
+    private fun initDialogFoto() {
+        val fotoDialogoItems = arrayOf(
+            "Seleccionar fotografía de galería",
+            "Capturar fotografía desde la cámara"
+        )
+        /*
+        // Creamos el dialog con su builder
+        AlertDialog.Builder(this)
+            .setTitle("Seleccionar Acción")
+            .setItems(fotoDialogoItems) { dialog, modo ->
+                when (modo) {
+                    0 -> elegirFotoGaleria()
+                    1 -> hacerFoto()
+                }
+            }
+            .show()*/
+    }
+
+    private fun CrearUsuario(){
         val usuario=Usuario(txtNombreRegistro.text.toString(),txtEmailRegistro.text.toString(),txtContrasenaRegistro.text.toString())
         UsuariosController.anadirUsuario(usuario)
     }
 
-    fun SacarUsuarios(): String {
+    private fun SacarUsuarios(): String {
         var resultado=UsuariosController.leerUsuario()
         return resultado
     }
+
+    private fun hacerFoto(){
+
+        // Si queremos hacer uso de fotos en alta calidad
+        //Preguntar que hace
+        val builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
+
+        // Eso para alta o baja
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        // Nombre de la imagen
+        IMAGEN_NOMBRE = Utilidades.crearNombreFichero()
+        // Salvamos el fichero
+        //val fichero = Utilidades.salvarImagen(IMAGEN_DIR, IMAGEN_NOMBRE, this)!!
+        //IMAGEN_URI = Uri.fromFile(fichero)
+
+        //intent.putExtra(MediaStore.EXTRA_OUTPUT, IMAGEN_URI)
+        // Esto para alta y baja
+        startActivityForResult(intent, CAMARA)
+    }
+
+    /**
+     * Elige una foto de la galeria
+     */
+    private fun elegirFotoGaleria() {
+        val intentGaleria = Intent(
+            Intent.ACTION_PICK,
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        )
+        startActivityForResult(intentGaleria, GALERIA)
+    }
+
 }
