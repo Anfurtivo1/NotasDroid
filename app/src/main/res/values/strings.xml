@@ -27,4 +27,8 @@
     <string name="btnHacerFoto">Hacer foto</string>
     <string name="TextoSplash">App desarrollada por Andres Sanchez Juarez</string>
     <string name="TituloSplash">NotasDroid</string>
+    <string name="nombre_usuario_expediente">Nombre</string>
+    <string name="curso_Expediente">Curso</string>
+    <string name="ciclo_Expediente">Ciclo</string>
+    <string name="media_total_Expediente">Media total</string>
 </resources>
