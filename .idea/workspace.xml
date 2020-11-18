@@ -20,9 +20,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/mitransicion.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mi_expediente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mi_expediente.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mi_matricula.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mi_matricula.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,10 +268,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604655777891" />
-    <state x="662" y="338" key="AndroidCreateXmlResourceDialog" timestamp="1605736529507">
+    <state x="662" y="338" key="AndroidCreateXmlResourceDialog" timestamp="1605740975240">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="662" y="338" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1605736529507" />
+    <state x="662" y="338" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1605740975240" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605293470786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -311,10 +312,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605291849389" />
-    <state x="530" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1605638519597">
+    <state x="530" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1605737648030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="530" y="216" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605638519597" />
+    <state x="530" y="216" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605737648030" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605737238799">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605737238799" />
     <state x="463" y="10" width="611" height="804" key="find.popup" timestamp="1605728933852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

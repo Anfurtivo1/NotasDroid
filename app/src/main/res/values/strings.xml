@@ -31,4 +31,11 @@
     <string name="curso_Expediente">Curso</string>
     <string name="ciclo_Expediente">Ciclo</string>
     <string name="media_total_Expediente">Media total</string>
+    <string name="sistemas_informaticos">Sistemas informáticos</string>
+    <string name="programacion">Programación</string>
+    <string name="lenguajes_de_marcas">Lenguajes de marcas</string>
+    <string name="entornos_de_desarrollo">Entornos de desarrollo</string>
+    <string name="formacion_y_orientacion_laboral">Formación y orientación laboral</string>
+    <string name="bases_de_datos">Bases de datos</string>
+    <string name="ingles_tecnico">Inglés técnico</string>
 </resources>

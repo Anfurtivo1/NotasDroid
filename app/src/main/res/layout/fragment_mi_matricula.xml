@@ -13,60 +13,202 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="415dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/twitter" />
+                android:src="@mipmap/lapiz" />
 
             <TextView
-                android:id="@+id/txt2"
+                android:id="@+id/txvModulo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="#8CAC7373"
                 android:padding="10dp"
-                android:text="@string/mensajeSplash"
+                android:text="@string/sistemas_informaticos"
+                android:textColor="#AC2929"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:src="@mipmap/lapiz" />
+
+            <TextView
+                android:id="@+id/txvModulo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#8CAC7373"
+                android:padding="10dp"
+                android:text="@string/bases_de_datos"
                 android:textColor="#AC2929"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="8dp"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:id="@+id/cardView5"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
             <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/twitter" />
+                android:layout_height="59dp"
+                android:src="@mipmap/lapiz" />
 
             <TextView
-                android:id="@+id/txt1"
+                android:id="@+id/txvModulo3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:background="#8c000000"
+                android:background="#8CAC7373"
                 android:padding="10dp"
-                android:text="@string/imagen"
-                android:textColor="#ffe3e3e3"
+                android:text="@string/programacion"
+                android:textColor="#AC2929"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:src="@mipmap/lapiz" />
 
-            />
+            <TextView
+                android:id="@+id/txvModulo4"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_gravity="bottom"
+                android:background="#8CAC7373"
+                android:padding="10dp"
+                android:text="@string/lenguajes_de_marcas"
+                android:textColor="#AC2929"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@mipmap/lapiz" />
+
+            <TextView
+                android:id="@+id/txvModulo5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#8CAC7373"
+                android:padding="10dp"
+                android:text="@string/entornos_de_desarrollo"
+                android:textColor="#AC2929"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@mipmap/lapiz" />
+
+            <TextView
+                android:id="@+id/txvModulo6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#8CAC7373"
+                android:padding="10dp"
+                android:text="@string/ingles_tecnico"
+                android:textColor="#AC2929"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:src="@mipmap/lapiz" />
+
+            <TextView
+                android:id="@+id/txvModulo7"
+                android:layout_width="411dp"
+                android:layout_height="94dp"
+                android:layout_gravity="bottom"
+                android:background="#8CAC7373"
+                android:padding="10dp"
+                android:text="@string/formacion_y_orientacion_laboral"
+                android:textColor="#AC2929"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
