@@ -25,4 +25,6 @@
     <string name="contrasena">Contraseña</string>
     <string name="nombre">Nombre</string>
     <string name="btnHacerFoto">Hacer foto</string>
+    <string name="TextoSplash">App desarrollada por Andres Sanchez Juarez</string>
+    <string name="TituloSplash">NotasDroid</string>
 </resources>

@@ -8,13 +8,38 @@
     >
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:text="TextView"
+        android:id="@+id/txtSplashInicio"
+        android:layout_width="369dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/TextoSplash"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="234dp"
+        android:layout_height="429dp"
+        android:src="@mipmap/notassplash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/txtTituloSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TituloSplash"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 </androidx.constraintlayout.widget.ConstraintLayout>
