@@ -1,10 +1,8 @@
 package com.example.notasdroidandroid
 
 import android.Manifest
-import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
-import android.database.Cursor
-import android.database.sqlite.SQLiteOpenHelper
 import android.net.Uri
 import android.os.Bundle
 import android.os.StrictMode
@@ -32,6 +30,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class RegistroFragment : Fragment() {
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -137,15 +136,15 @@ class RegistroFragment : Fragment() {
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
 
-        // Eso para alta o baja resolucion
+        // Esto para alta o baja resolucion
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         // Nombre de la imagen
         IMAGEN_NOMBRE = Utilidades.crearNombreFichero()
         // Salvamos el fichero
-        //val fichero = Utilidades.salvarImagen(IMAGEN_DIR, IMAGEN_NOMBRE, this)!!
-        //IMAGEN_URI = Uri.fromFile(fichero)
+        val fichero = Utilidades.salvarImagen(IMAGEN_DIR, IMAGEN_NOMBRE, activity)
+        IMAGEN_URI = Uri.fromFile(fichero)
 
-        //intent.putExtra(MediaStore.EXTRA_OUTPUT, IMAGEN_URI)
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, IMAGEN_URI)
         // Esto para alta y baja
         startActivityForResult(intent, CAMARA)
     }
