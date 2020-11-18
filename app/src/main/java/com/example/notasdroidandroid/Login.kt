@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_first.*
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_registro.*
 
@@ -45,6 +44,7 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        btnIniciarSesion.setOnClickListener { abrirPrincipal() }
         btnRegistrarse.setOnClickListener { abrirRegistro() }
 
     }
@@ -75,6 +75,16 @@ class Login : Fragment() {
 
 //		//Llamamos al replace
         transaction.replace(R.id.nav_host_fragment, registro)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    fun abrirPrincipal(){
+        val principal = SecondFragment()
+        val transaction = fragmentManager!!.beginTransaction()
+
+//		//Llamamos al replace
+        transaction.replace(R.id.nav_host_fragment, principal)
         transaction.addToBackStack(null)
         transaction.commit()
     }

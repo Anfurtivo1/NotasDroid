@@ -49,7 +49,9 @@ class MiExpediente : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var toast: Toast = Toast.makeText(context,"Se va a compartir", Toast.LENGTH_SHORT)
-        fabExpediente.setOnClickListener{Utilidades.mandarCorreo("")}
+        fabExpediente.setOnClickListener{
+            toast.show()
+            Utilidades.mandarCorreo("")}
 
     }
 

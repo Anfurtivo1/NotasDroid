@@ -36,8 +36,8 @@ object UsuariosController {
             null)
 
         do {
-            // El 0 es el n�mero de la columna, como seleccionamos
-            // nombre, edad,id entonces el nombre es 0, edad 1 e id es 2
+            // El 0 es el numero de la columna, como seleccionamos
+            // nombre, email,contrasena entonces el nombre es 0, email 1 y contrasena es 2
             val nombreObtenidoDeBD: String = c.getString(0)
             val emailObtenidoDeBD: String = c.getString(1)
             val contrasena: String = c.getString(2)
