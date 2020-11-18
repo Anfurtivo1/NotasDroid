@@ -74,7 +74,7 @@ class RegistroFragment : Fragment() {
         var toast:Toast = Toast.makeText(context,"Se ha registrador el usuario",Toast.LENGTH_SHORT)
         btnRegistrarseRegistro.setOnClickListener { toast.show()}
         var usuarios=""
-        btnMostrarRegistros.setOnClickListener { usuarios=SacarUsuarios() }
+        //btnMostrarRegistros.setOnClickListener { usuarios=SacarUsuarios() }
         var toast2:Toast = Toast.makeText(context,usuarios,Toast.LENGTH_SHORT)
         btnHacerFoto.setOnClickListener { hacerFoto() }
 

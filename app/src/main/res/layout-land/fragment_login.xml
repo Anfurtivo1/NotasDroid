@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroFragment">
+    tools:context=".Login">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,33 +13,21 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/txtNombreRegistro"
+            android:id="@+id/txtUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/nombre"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.142" />
-
-        <EditText
-            android:id="@+id/txtContrasenaRegistro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
             android:text="@string/Email"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.258" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <EditText
-            android:id="@+id/txtEmailRegistro"
+            android:id="@+id/txtContrasena"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -47,32 +35,34 @@
             android:text="@string/contrasena"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.368" />
+            app:layout_constraintVertical_bias="0.208" />
 
         <Button
-            android:id="@+id/btnRegistrarseRegistro"
+            android:id="@+id/btnIniciarSesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Registrase"
+            android:text="@string/Iniciar_Sesion"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.679" />
+            app:layout_constraintVertical_bias="0.342" />
 
         <Button
-            android:id="@+id/btnHacerFoto"
+            android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnHacerFoto"
+            android:text="@string/Registrase"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.561" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
