@@ -133,7 +133,6 @@ class RegistroFragment : Fragment() {
     private fun hacerFoto(){
 
         // Si queremos hacer uso de fotos en alta calidad
-        //Preguntar que hace
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
 
