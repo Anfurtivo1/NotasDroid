@@ -1,5 +1,6 @@
 package com.example.notasdroidandroid
 
+import android.Manifest
 import android.app.AlertDialog
 import android.content.Intent
 import android.database.Cursor
@@ -13,6 +14,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import kotlinx.android.synthetic.main.fragment_registro.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,6 +53,8 @@ class RegistroFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        ComprobarPermisos()
 
     }
 
@@ -129,7 +137,7 @@ class RegistroFragment : Fragment() {
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
 
-        // Eso para alta o baja
+        // Eso para alta o baja resolucion
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         // Nombre de la imagen
         IMAGEN_NOMBRE = Utilidades.crearNombreFichero()
@@ -151,6 +159,45 @@ class RegistroFragment : Fragment() {
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI
         )
         startActivityForResult(intentGaleria, GALERIA)
+    }
+
+    /**
+     * Comprobamos los permisos de la aplicación
+     */
+    private fun ComprobarPermisos() {
+        // Indicamos el permisos y el manejador de eventos de los mismos
+        Dexter.withContext(activity)
+            // Lista de permisos a comprobar
+            .withPermissions(
+                Manifest.permission.CAMERA,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+            // Se va a ejecutar un listener
+            .withListener(object : MultiplePermissionsListener {
+                override fun onPermissionsChecked(report: MultiplePermissionsReport) {
+                    // comprobamos si tenemos todos los permisos necesarios
+                    if (report.areAllPermissionsGranted()) {
+                        Toast.makeText(context, "¡Se han podido verificar todos los permisos!", Toast.LENGTH_SHORT).show()
+                    }
+
+                    // En caso de que no tuvieramos algun permiso concedido hariamos lo siguiente
+                    if (report.isAnyPermissionPermanentlyDenied) {
+                        // abrimos un diálogo a los permisos
+                        //openSettingsDialog();
+                    }
+                }
+
+                //Aqui mostraremos un toast en caso de que falte algún permiso
+                override fun onPermissionRationaleShouldBeShown(
+                    permissions: List<PermissionRequest?>?,
+                    token: PermissionToken
+                ) {
+                    token.continuePermissionRequest()
+                }
+            }).withErrorListener { Toast.makeText(context, "Existe errores! ", Toast.LENGTH_SHORT).show() }
+            .onSameThread()
+            .check()
     }
 
 }
