@@ -39,6 +39,9 @@ object Utilidades {
 
     }
 
+    /**
+     * Intent para mandar correo
+     */
      fun mandarCorreo(receptor:String){
         val intent = Intent(Intent.ACTION_SEND)
         intent.data = Uri.parse("mailto:")
@@ -57,7 +60,4 @@ object Utilidades {
 
         }
     }
-
-
-
 }

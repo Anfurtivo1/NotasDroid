@@ -32,6 +32,9 @@ class SecondFragment : Fragment() {
 
     }
 
+    /**
+     * Se abre el fragment de expediente
+     */
     fun abrirMiExpendiente(){
         val expediente = MiExpediente()
         val transaction = fragmentManager!!.beginTransaction()
@@ -42,6 +45,9 @@ class SecondFragment : Fragment() {
 		transaction.commit()
     }
 
+    /**
+     * Se abre el fragment de mi matricula
+     */
     fun abrirMiMatricula(){
         val matricula = MiMatricula()
         val transaction = fragmentManager!!.beginTransaction()

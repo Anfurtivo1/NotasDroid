@@ -70,6 +70,9 @@ class Login : Fragment() {
             }
     }
 
+    /**
+     * Se abre el fragment de registro
+     */
     fun abrirRegistro(){
         val registro = RegistroFragment()
         val transaction = fragmentManager!!.beginTransaction()
@@ -80,6 +83,9 @@ class Login : Fragment() {
         transaction.commit()
     }
 
+    /**
+     * Se abre el fragment principal
+     */
     fun abrirPrincipal(){
         val principal = SecondFragment()
         val transaction = fragmentManager!!.beginTransaction()

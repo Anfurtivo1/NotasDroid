@@ -12,6 +12,9 @@ object UsuariosController {
         ayudanteBaseDeDatos = contexto?.let { BaseDatos(it) }
     }
 
+    /**
+     * Para añadir usuarios
+     */
     fun anadirUsuario(usuario: Usuario): Long {
 
         val sqlite = ayudanteBaseDeDatos!!.writableDatabase
@@ -23,6 +26,9 @@ object UsuariosController {
 
     }
 
+    /**
+     * Para leer Usuarios
+     */
     fun leerUsuario(): String {
         var resultado=""
         val columnasAConsultar = arrayOf("nombre", "email", "contrasena")

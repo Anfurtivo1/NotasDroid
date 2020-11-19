@@ -118,11 +118,17 @@ class RegistroFragment : Fragment() {
             .show()*/
     }
 
+    /**
+     * Para crear usuarios
+     */
     private fun CrearUsuario(){
         val usuario=Usuario(txtNombreRegistro.text.toString(),txtContrasenaRegistro.text.toString(),txtContrasenaRegistro.text.toString())
         UsuariosController.anadirUsuario(usuario)
     }
 
+    /**
+     * Para sacar usuarios
+     */
     private fun SacarUsuarios(): String {
         var resultado=UsuariosController.leerUsuario()
         return resultado
