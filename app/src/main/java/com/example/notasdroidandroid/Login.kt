@@ -1,6 +1,7 @@
 package com.example.notasdroidandroid
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -88,4 +89,28 @@ class Login : Fragment() {
         transaction.addToBackStack(null)
         transaction.commit()
     }
+/*
+    // Para salvar el estado por ejemplo es usando un Bundle en el ciclo de vida
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.run {
+            //los recogemos de la interfaz
+            putString("USUARIO", txtUsuario.text.toString())
+            putString("CONTRASENA",txtContrasena.text.toString())
+            Log.i("CICLO", "Salvando el estado")
+        }
+        // Siempre se llama a la superclase para salvar las cosas
+        super.onSaveInstanceState(savedInstanceState)
+    }
+    */
+
+    // Para recuperar el estado al volver a un estado de ciclo de vida de la Interfaz
+    fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        // Recuperamos del Bundle
+        savedInstanceState.run {
+            txtUsuario.setText(getString("RECEPTOR").toString())
+            txtContrasena.setText(getString("ASUNTO").toString())
+            Log.i("CICLO", "Recuperando el estado")
+        }
+    }
+
 }

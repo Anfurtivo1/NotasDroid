@@ -26,7 +26,7 @@
             app:layout_constraintVertical_bias="0.142" />
 
         <EditText
-            android:id="@+id/txtContrasenaRegistro"
+            android:id="@+id/txtEmailRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -39,7 +39,7 @@
             app:layout_constraintVertical_bias="0.258" />
 
         <EditText
-            android:id="@+id/txtEmailRegistro"
+            android:id="@+id/txtContrasenaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

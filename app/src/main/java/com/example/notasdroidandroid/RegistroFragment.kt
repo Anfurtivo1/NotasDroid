@@ -1,14 +1,12 @@
 package com.example.notasdroidandroid
 
 import android.Manifest
-import android.app.AlertDialog
 import android.content.Intent
-import android.database.Cursor
-import android.database.sqlite.SQLiteOpenHelper
 import android.net.Uri
 import android.os.Bundle
 import android.os.StrictMode
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -121,7 +119,7 @@ class RegistroFragment : Fragment() {
     }
 
     private fun CrearUsuario(){
-        val usuario=Usuario(txtNombreRegistro.text.toString(),txtEmailRegistro.text.toString(),txtContrasenaRegistro.text.toString())
+        val usuario=Usuario(txtNombreRegistro.text.toString(),txtContrasenaRegistro.text.toString(),txtContrasenaRegistro.text.toString())
         UsuariosController.anadirUsuario(usuario)
     }
 
@@ -198,5 +196,30 @@ class RegistroFragment : Fragment() {
             .onSameThread()
             .check()
     }
+    /*
+    // Para salvar el estado por ejemplo es usando un Bundle en el ciclo de vida
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.run {
+            //los recogemos de la interfaz
+            putString("NOMBRE", txtNombreRegistro.text.toString())
+            putString("EMAIL",txtEmailRegistro.text.toString())
+            putString("CONTRASENA",txtContrasenaRegistro.text.toString())
+
+            Log.i("CICLO", "Salvando el estado")
+        }
+        // Siempre se llama a la superclase para salvar las cosas
+        super.onSaveInstanceState(savedInstanceState)
+    }*/
+
+    // Para recuperar el estado al volver a un estado de ciclo de vida de la Interfaz
+     /*fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        // Recuperamos del Bundle
+        savedInstanceState.run {
+            txtNombreRegistro.setText(getString("NOMBRE").toString())
+            txtEmailRegistro.setText(getString("EMAIL").toString())
+            txtContrasenaRegistro.setText(getString("CONTRASENA").toString())
+            Log.i("CICLO", "Recuperando el estado")
+        }
+    }*/
 
 }

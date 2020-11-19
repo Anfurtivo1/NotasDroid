@@ -1,6 +1,7 @@
 package com.example.notasdroidandroid
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -74,4 +75,33 @@ class MiExpediente : Fragment() {
                 }
             }
     }
+
+ /*   // Para salvar el estado por ejemplo es usando un Bundle en el ciclo de vida
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.run {
+            //los recogemos de la interfaz
+            putString("NOMBRE", txtNombreExpediente.text.toString())
+            putString("CURSO",txtCursoExpediente.text.toString())
+            putString("CICLO",txtCicloExpediente.text.toString())
+            putString("MEDIA",txtMediaTotal.text.toString())
+
+            Log.i("CICLO", "Salvando el estado")
+        }
+        // Siempre se llama a la superclase para salvar las cosas
+        super.onSaveInstanceState(savedInstanceState)
+    }*/
+
+    // Para recuperar el estado al volver a un estado de ciclo de vida de la Interfaz
+     /*fun onRestoreInstanceState(savedInstanceState: Bundle) {
+
+        // Recuperamos del Bundle
+        savedInstanceState.run {
+            txtNombreExpediente.setText(getString("NOMBRE").toString())
+            txtCursoExpediente.setText(getString("CURSO").toString())
+            txtCicloExpediente.setText(getString("CICLO").toString())
+            txtMediaTotal.setText(getString("MEDIA").toString())
+            Log.i("CICLO", "Recuperando el estado")
+        }
+    }*/
+
 }
